@@ -1,5 +1,3 @@
-
-
 lib.compareDates(new Date(2012,4,20), new Date());
 
 
@@ -16,20 +14,3 @@ lib.checkPhoneNumber("(407) 443-2792");
 
 
 lib.checkUrl("portal.online.fullsail.edu");
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    

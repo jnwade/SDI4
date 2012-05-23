@@ -26,7 +26,57 @@ var jnwadeLib = function(){
 			console.log("You have entered an invalid email address. Please try again.")
 			};
 	};	
+	
+	var addDecimal = function(num) { // In this function we are taking a whole number and adding two decimal places to give is a monetary value.
+		var newValue = num.toFixed(2);
+		console.log("Dollar ammount: " + newValue);
+	};
+ 
+	var stringify = function(list){ // This function will take data from an array and list them in one string.
+		list.toString();
+		console.log("Things I wil need for the show: " + list);
+	};
+
+    
+	var checkPhoneNumber = function (phoneNumber){ // this function works the same way that the checkEmail function work using a different regex.
+		var phoneNumberPattern = /^[(]?\d{3}[)]?\s?-?\s?\d{3}\s?-?\s?\d{4}$/;
+			if(phoneNumberPattern.test(phoneNumber)) {
+			console.log("You have entered a valid phone number.");
+			}
+			else
+			{
+			console.log("You have entered an invalid phone number. Please try again.");
+			};
+	    
+        };
+
+	var checkUrl = function(url){
+		var urlPattern = (/(https?:\/\/)?.+/);
+			if(urlPattern.test(url)) {
+			    console.log("You have entered a valid URL.");
+			}
+			else
+			{
+			console.log("I'm sorry, you have entered an invalid URL. Please try again.");
+			};
+	};
+
+			return {
+				
+				"compareDates" : compareDates,
+				"checkEmail" : checkEmail,
+				"addDecimal" : addDecimal,
+				"stringify" : stringify,
+				"checkPhoneNumber" : checkPhoneNumber
+				"checkUrl" : checkUrl
+			};
+        
 };
+
+var lib = jnwadeLib();
+
+
+
 
 
 
