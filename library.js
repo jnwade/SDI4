@@ -27,14 +27,14 @@ var jnwadeLib = function(){
 			};
 	};	
 	
-	var addDecimal = function(num) { // In this function we are taking a whole number and adding two decimal places to give is a monetary value.
+	var addDecimal = function(num) { // In this function we are taking a whole number and adding two decimal places to give it a monetary value.
 		var newValue = num.toFixed(2);
 		console.log("Dollar ammount: " + newValue);
 	};
  
 	var stringify = function(list){ // This function will take data from an array and list them in one string.
 		list.toString();
-		console.log("Things I wil need for the show: " + list);
+		console.log("The tempos for the first four songs is as follows: " + list);
 	};
 
     
@@ -50,7 +50,7 @@ var jnwadeLib = function(){
 	    
         };
 
-	var checkUrl = function(url){
+	var checkUrl = function(url){ // this function works the same way that the checkEmail function work using a different regex.
 		var urlPattern = (/(https?:\/\/)?.+/);
 			if(urlPattern.test(url)) {
 			    console.log("You have entered a valid URL.");
@@ -60,6 +60,7 @@ var jnwadeLib = function(){
 			console.log("I'm sorry, you have entered an invalid URL. Please try again.");
 			};
 	};
+		
 
 			return {
 				
@@ -67,7 +68,7 @@ var jnwadeLib = function(){
 				"checkEmail" : checkEmail,
 				"addDecimal" : addDecimal,
 				"stringify" : stringify,
-				"checkPhoneNumber" : checkPhoneNumber
+				"checkPhoneNumber" : checkPhoneNumber,
 				"checkUrl" : checkUrl
 			};
         
@@ -76,22 +77,7 @@ var jnwadeLib = function(){
 var lib = jnwadeLib();
 
 
-lib.compareDates(new Date(2012,4,20), new Date());
 
-
-lib.checkEmail("jnwade@fullsail.com");
-
- 
-lib.addDecimal(5.1);
-
-
-lib.stringify([40, 25, 18, 16]);
-    
-
-lib.checkPhoneNumber("(407) 443-2792");
-
-
-lib.checkUrl("portal.online.fullsail.edu");
 
 
 
